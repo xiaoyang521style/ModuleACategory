@@ -13,7 +13,7 @@
 - (UIViewController *)ModuleB_viewControllerWithCallback:(void(^)(NSString *result))callback {
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     params[@"callback"] = callback;
-    return [self performTarget:@"ModuleB" action:@"viewController" params:params shouldCacheTarget:NO];
+    return [self performTarget:@"ModuleA" action:@"viewController" params:params shouldCacheTarget:NO];
 }
 
 
