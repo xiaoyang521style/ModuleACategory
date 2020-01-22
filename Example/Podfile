@@ -1,10 +1,12 @@
 use_frameworks!
+source 'https://github.com/xiaoyang521style/iOS-Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '8.0'
 
 target 'ModuleACategory_Example' do
   pod 'ModuleACategory', :path => '../'
-
+  pod "CTMediator"
   target 'ModuleACategory_Tests' do
     inherit! :search_paths
 
