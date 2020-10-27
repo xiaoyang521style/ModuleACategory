@@ -10,10 +10,11 @@
 
 @implementation CTMediator (ModuleA)
 
-- (UIViewController *)ModuleA_viewControllerWithCallback:(void(^)(NSString *result))callback {
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    params[@"callback"] = callback;
-    return [self performTarget:@"ModuleA" action:@"viewController" params:params shouldCacheTarget:NO];
+- (UIViewController *)ModuleA_viewControllerWithParam:(NSDictionary *)pararm callback:(void(^)(id result))callback {
+    NSMutableDictionary *url_params = [[NSMutableDictionary alloc] init];
+    url_params[@"callback"] = callback;
+    url_params[@"params"] = pararm;
+    return [self performTarget:@"ModuleA" action:@"viewController" params:url_params shouldCacheTarget:NO];
 }
 
 
